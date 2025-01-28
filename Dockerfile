@@ -9,6 +9,9 @@ COPY --from=node /usr/local/lib /usr/local/lib
 COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
+# Install necessary tools
+RUN apk add --no-cache fontconfig wget unzip
+
 # Set environment variables
 ENV XDG_DATA_HOME=/root/.local/share
 
