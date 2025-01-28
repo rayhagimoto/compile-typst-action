@@ -10,7 +10,8 @@ COPY --from=node /usr/local/include /usr/local/include
 COPY --from=node /usr/local/bin /usr/local/bin
 
 # Install necessary tools
-RUN apk add --no-cache fontconfig wget unzip
+RUN apk add --no-cache fontconfig wget unzip msttcorefonts-installer
+RUN update-ms-fonts
 
 # Set environment variables
 ENV XDG_DATA_HOME=/root/.local/share
