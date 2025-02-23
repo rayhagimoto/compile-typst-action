@@ -18,8 +18,9 @@
 #let pd = $diff$
 
 // Probability shorthands
-#let Cov = $"Cov"$
-#let Var = $"Var"$
+#let Cov = $op("Cov")$
+#let Var = $op("Var")$
+#let Corr = $op("Corr")$
 
 // Colors
 #let cyan = rgb("#66ccff50")
@@ -34,8 +35,10 @@
 
 // ----------------- References ----------------
 
-#let eref(label) = [eq. #ref(label)]
-#let Eref(label) = [Eq. #ref(label)]
+#let eref(label) = [eq.~#ref(label)]
+#let Eref(label) = [Eq.~#ref(label)]
+#let sref(label) = [sec.~#ref(label)]
+#let Sref(label) = [Sec.~#ref(label)]
 
 // ----------------- Title ----------------------
 
